@@ -1,0 +1,4 @@
+*.gymshark.com
+gymshark.com
+sni.cloudflaressl.com
+Subdomain count: 3
