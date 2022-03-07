@@ -8,8 +8,8 @@ def main():
     # All commands, you need to have cert.sh in the same folder as this script
     find = sp.getoutput('./cert.sh {} > all.txt'.format(sys.argv[1])) # find all subdomains and put them in all.txt
     count = sp.getoutput("./cert.sh {} | wc -l".format(sys.argv[1]))  # find all subdomains and count them
-    probe = sp.getoutput("./cert.sh {} | ~/go/bin/httprobe > alive.txt".format(sys.argv[1])) # find all subdomains and probe them(filter the alive ones)
-    countProbe = sp.getoutput("./cert.sh {} | ~/go/bin/httprobe | wc -l".format(sys.argv[1])) # find all alive subdomains and count them
+    probe = sp.getoutput("./cert.sh {} | httprobe > alive.txt".format(sys.argv[1])) # find all subdomains and probe them(filter the alive ones)
+    countProbe = sp.getoutput("./cert.sh {} | httprobe | wc -l".format(sys.argv[1])) # find all alive subdomains and count them
 
     # Outputting all the results
     print("Found: \n", sp.getoutput("cat all.txt"))
