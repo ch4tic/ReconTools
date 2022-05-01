@@ -4,7 +4,7 @@ import subprocess as sp
 import sys
 import os
 
-def main(): 
+def main():
     # All commands, you need to have cert.sh in the same folder as this script
     find = sp.getoutput('./crt.sh {} > certsh-all.txt'.format(sys.argv[1])) # find all subdomains and put them in all.txt
     count = sp.getoutput("./crt.sh {} | wc -l".format(sys.argv[1]))  # find all subdomains and count them
@@ -17,15 +17,21 @@ def main():
     print("Alive: \n", sp.getoutput("cat certsh-alive.txt"))
     print("Alive domain count: " + str(countProbe) + ".")
 
+    folder = sys.argv[1]
+    os.mkdir(folder)
+
     # Write the total subdomain count in all.txt
     domain_file = open("certsh-all.txt", 'a')
     domain_file.write("Subdomain count: {}\n".format(str(count)))
     domain_file.close()
-    
+
     # Write alive subdomain count in alive.txt
     alive_file = open("certsh-alive.txt", 'a')
     alive_file.write("Alive domain count: {}\n".format(str(countProbe)))
     alive_file.close()
+
+    os.system("mv certsh-all.txt " + folder + "/")
+    os.system("mv certsh-alive.txt " + folder + "/")
 
 if __name__ == "__main__":
     main()
