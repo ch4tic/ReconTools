@@ -5,6 +5,6 @@ All my recon tools, some made into Python scripts.
 
 Installation for Debian: **sudo apt-get install jq** 
 
-Installation for Arch: **sudo pacman -S jq or sudo snap install jq**
+Installation for Arch: **sudo pacman -S jq or sudo snap install jq** 
 
 httprobe: **go get -u github.com/tomnomnom/httprobe**
