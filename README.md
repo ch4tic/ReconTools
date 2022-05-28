@@ -1,5 +1,5 @@
 # ReconTools
-All my recon tools, some made into Python scripts.
+My recon tools, made into Python scripts.
 
 *Note: If you want things to work properly, install "jq" package and httprobe (a tool from TomNomNom)*
 
