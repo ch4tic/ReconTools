@@ -1,2 +1,0 @@
-Subdomain count: ./cert.sh: 1: jq: not found
-0

@@ -1,3 +1,0 @@
-Alive domain count: /bin/sh: 1: httprobe: not found
-0
-./cert.sh: 1: jq: not found

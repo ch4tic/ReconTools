@@ -4,6 +4,8 @@ import subprocess as sp
 import sys
 import os
 
+from dotenv import load_dotenv
+
 def main():
     # All commands, you need to have cert.sh in the same folder as this script
     find = sp.getoutput('./crt.sh {} > certsh-all.txt'.format(sys.argv[1])) # find all subdomains and put them in all.txt
@@ -18,8 +20,14 @@ def main():
     print("Alive domain count: " + str(countProbe) + ".")
 
     folder = sys.argv[1]
-    os.mkdir(folder)
+    pdir = "/home/eman/Documents/recon-data/" # path where you want to store recon data
+    path = os.path.join(pdir, folder)
 
+    # changing directories to path and making a folder with the data there
+    try: 
+        os.mkdir(path)
+    except:
+        pass
     # Write the total subdomain count in all.txt
     domain_file = open("certsh-all.txt", 'a')
     domain_file.write("Subdomain count: {}\n".format(str(count)))
@@ -30,8 +38,8 @@ def main():
     alive_file.write("Alive domain count: {}\n".format(str(countProbe)))
     alive_file.close()
 
-    os.system("mv certsh-all.txt " + folder + "/")
-    os.system("mv certsh-alive.txt " + folder + "/")
+    os.system("mv certsh-all.txt " + path  + "/")
+    os.system("mv certsh-alive.txt " + path + "/")
 
 if __name__ == "__main__":
     main()

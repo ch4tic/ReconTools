@@ -19,7 +19,13 @@ def main():
 
     # Creating a folder under the name of given website domain
     folder = sys.argv[1]
-    os.mkdir(folder)
+    pdir = "/home/eman/Documents/recon-data/" # path where you want to store recon data
+    path = os.path.join(pdir, folder)
+
+    try: 
+        os.mkdir(path)
+    except:
+        pass
 
     # Write the total subdomain count in all.txt
     domain_file = open("all.txt", 'a')
@@ -32,8 +38,8 @@ def main():
     alive_file.close()
 
     # Moving all made files into a seperate folder
-    os.system("mv all.txt " + folder + "/")
-    os.system("mv alive.txt " + folder + "/")
+    os.system("mv all.txt " + path + "/")
+    os.system("mv alive.txt " + path + "/")
 
 if __name__ == "__main__":
     main()
