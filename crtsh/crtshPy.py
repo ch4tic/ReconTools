@@ -4,8 +4,6 @@ import subprocess as sp
 import sys
 import os
 
-from dotenv import load_dotenv
-
 def main():
     # All commands, you need to have cert.sh in the same folder as this script
     find = sp.getoutput('./crt.sh {} > certsh-all.txt'.format(sys.argv[1])) # find all subdomains and put them in all.txt
