@@ -1,7 +1,7 @@
 # ReconTools
 My recon tools, made into Python scripts.
 
-*Note: If you want things to work properly, install "jq" package and httprobe (a tool from TomNomNom)*
+*Note: If you want things to work properly, install `jq` package and `httprobe` (a tool from TomNomNom)*
 
 Installation for Debian: **sudo apt-get install jq** 
 
