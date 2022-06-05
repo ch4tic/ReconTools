@@ -1,0 +1,7 @@
+gau - go install github.com/lc/gau/v2/cmd/gau@latest
+gobuster - sudo apt install gobuster
+waybackurls - go install github.com/tomnomnom/waybackurls@latest 
+httprobe - go install github.com/tomnomnom/httprobe@latest
+amass - sudo snap install amass 
+aquatone - https://github.com/michenriksen/aquatone/releases/tag/v1.7.0
+ReconTools - https://github.com/ch4tic/ReconTools
