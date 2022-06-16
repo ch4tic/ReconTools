@@ -1,5 +1,5 @@
-# ReconTools
-My recon tools, made into Python scripts.
+# Recon Materials, Tools
+Materials and Tools I use for conducting recon on web applications.
 
 *Note: If you want things to work properly, install `jq` package and `httprobe` (a tool from TomNomNom)*
 
