@@ -5,4 +5,6 @@ waybackurls - go install github.com/tomnomnom/waybackurls@latest
 httprobe - go install github.com/tomnomnom/httprobe@latest
 amass - sudo snap install amass 
 aquatone - https://github.com/michenriksen/aquatone/releases/tag/v1.7.0
-ReconTools - https://github.com/ch4tic/ReconTools
+403bypass - https://github.com/offsecdawn/403bypass 
+
+recon-materials - https://github.com/ch4tic/recon-materials
