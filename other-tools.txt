@@ -6,5 +6,6 @@ httprobe - go install github.com/tomnomnom/httprobe@latest
 amass - sudo snap install amass 
 aquatone - https://github.com/michenriksen/aquatone/releases/tag/v1.7.0
 403bypass - https://github.com/offsecdawn/403bypass 
+searchsploit - https://github.com/offensive-security/exploit-database | download and add to /opt/, set PATH variable 
 
 recon-materials - https://github.com/ch4tic/recon-materials
